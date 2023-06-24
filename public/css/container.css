@@ -344,7 +344,7 @@
 }
 
 .background-banner-pic-from-behind {
-    background-image: url(/public/img/pic7.jpg);
+    background-image: url(../img/pic7.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
