@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+
+.container {
+    height: 100vh;
+    perspective: 100px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.banner--item {
+    scroll-snap-align: start;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.banner-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-10px) scale(1.);
+}
+
+.content {
+    font-size: 4rem;
+    color: mediumspringgreen;
+    position: absolute;
+    transform: translateZ(10px) translateY(-92px);
+    text-shadow: 4px 8px 3px black;
+    text-align: center;
+    font-family: 'Orbit', sans-serif;
+}
+
+.banner--layer4 {
+    width: 84%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateZ(24px) rotate(180deg) translateY(640px) scaleX(-1);
+    position: absolute;
+}
+
+.banner--layer4::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 24px;
+    height: 100px;
+    background: linear-gradient(0deg, rgba(35, 51, 152, 1) 28%, rgba(82, 98, 172, 1) 100%);
+    filter: blur(10px);
+}
+
+.banner--layer1 {
+    width: 100px;
+    transform: translateZ(0);
+    position: absolute;
+    animation-delay: 0.5s !important;
+    opacity: 0;
+}
+
+.banner--layer2 {
+    width: 25%;
+    transform: translateZ(0);
+    position: absolute;
+    object-fit: cover;
+    opacity: 0;
+}
+
+@keyframes appendBox {
+    from {
+        opacity: 0;
+        width: 5%;
+        transform: translateZ(0) translateY(0) translateX(0);
+    }
+    to {
+        opacity: 1;
+        width: 90%;
+        transform: translateZ(20px) translateY(-300px) translateX(70px);
+    }
+}
+
+/*@keyframes box {*/
+/*    from {*/
+/*        width: 90%;*/
+/*        transform: translateZ(20px) translateX(70px) translateY(-300px);*/
+/*    }*/
+/*    to {*/
+/*        width: 90%;*/
+/*        transform: translateZ(25px) translateX(120px) translateY(-240px);*/
+/*    }*/
+/*}*/
+
+@keyframes appendSpider {
+    from {
+        opacity: 0;
+        width: 100px;
+        transform: translateZ(0);
+    }
+    to {
+        opacity: 1;
+        width: 1000px;
+        transform: translateZ(16px) rotateX(-3deg) translateX(-160px) translateY(54px);
+    }
+}
+
+.banner--content-2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform-style: preserve-3d;
+    transform: translateX(270px) translateY(-20px);
+    font-family: 'Orbit', sans-serif;
+}
+
+.banner--content-2__tittle {
+    transform: translateZ(16px);
+    font-size: 4rem;
+    text-shadow: 3px 12px 6px black;
+    opacity: 0;
+}
+
+.banner--content-2__description {
+    text-align: match-parent;
+    font-size: small;
+    width: 540px;
+    transform: translateZ(16px);
+    text-shadow: 0 8px 4px black;
+    animation-delay: 3s !important;
+    opacity: 0;
+    padding-top: 16px;
+}
+
+.activeTextBanner2 {
+    animation: activeTextBanner2 3s linear forwards;
+}
+
+.activeTextBanner3 {
+    animation: activeTextBanner3 3s linear forwards;
+}
+
+@keyframes activeTextBanner2 {
+    from {
+        opacity: 0;
+        transform: translateZ(0) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(16px) translateY(20px);
+    }
+}
+
+@keyframes activeTextBanner3 {
+    from {
+        opacity: 0;
+        transform: translateZ(0) translateX(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(16px) translateX(0);
+    }
+}
+
+.banner--layer3 {
+    width: 100px;
+    transform: translateZ(0) rotateX(1deg) translateX(32vw) translateY(25vh);
+    position: absolute;
+    /*opacity: 0;*/
+}
+
+@keyframes animationBannerLayer3 {
+    from {
+        opacity: 0;
+        width: 100px;
+        transform: translateZ(0) translateX(32vw) translateY(25vh);
+    }
+    to {
+        opacity: 1;
+        width: 1600px;
+        transform: translateZ(16px) translateX(-240px) translateY(0);
+    }
+}
+
+.banner--layer5 {
+    width: 1200px;
+    transform: translateZ(26px) translateY(-90%);
+    position: absolute;
+}
+
+.gripPics {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    perspective: 1200px;
+    transform: translateY(88px);
+    overflow-x: hidden;
+    /*perspective-origin: 50% 50%;*/
+}
+
+.banner--pic {
+    width: 240px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e89750;
+    margin: 0 40px;
+    transition: 1.5s;
+    border-radius: 25px;
+    overflow: hidden;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.banner--pic img {
+    width: 100%;
+    height: 232px;
+    cursor: pointer;
+    object-fit: cover;
+    object-position: 70% 30%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.banner--pic:nth-child(6) {
+    transform: translateZ(16px) translateX(-320px) rotateY(0);
+    opacity: 0;
+}
+
+.banner--pic:nth-child(5) {
+    transform: translateZ(80px) translateX(0) rotateY(0) scale(1.3);
+    opacity: 1;
+    /*animation: animationRotate 2s linear forwards;*/
+}
+
+.banner--pic:nth-child(4) {
+    transform: translateZ(16px) translateX(320px) rotateY(0);
+    opacity: 1;
+}
+
+.banner--pic:nth-child(3) {
+    transform: translateZ(16px) translateX(0) rotateY(0);
+    opacity: 0
+}
+
+.banner--pic:nth-child(1) {
+    transform: translateZ(16px) translateX(-320px) rotateY(0);
+    opacity: 1
+}
+
+.banner--pic:nth-child(2) {
+    transform: translateZ(16px) translateX(0) rotateY(0);
+    opacity: 0;
+}
+
+.banner--pic:nth-child(2):hover {
+}
+
+.banner-pic--content {
+    width: 100%;
+    height: auto;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-family: 'Orbit', sans-serif;
+    background-color: white;
+    cursor: pointer;
+}
+
+.banner-pic--content_title {
+    font-size: 2rem;
+}
+
+.banner-pic--content_description {
+    font-size: 1rem;
+}
+
+.list--btn__banner {
+    position: absolute;
+    bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list--btn__banner button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    padding: 8px;
+    font-size: medium;
+    border-radius: 50%;
+}
+
+@keyframes animationRotate {
+    from {
+        transform: translateZ(16px) rotateY(0) scale(1.3);
+    }
+    to {
+        transform: translateZ(80px) rotateY(360deg) scale(1.3);
+    }
+}
+
+@keyframes animationRotateNext {
+    from {
+        transform: translateZ(80px) rotateY(-180deg) scale(1.3);
+    }
+    to {
+        transform: translateZ(80px) rotateY(0) scale(1.3);
+    }
+}
+
+@keyframes animationRotatePrev {
+    from {
+        transform: translateZ(16px) rotateY(180deg) scale(1.3);
+    }
+    to {
+        transform: translateZ(80px) rotateY(0) scale(1.3);
+    }
+}
+
+.background-banner-pic-from-behind {
+    background-image: url(/public/img/pic7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 25px;
+    transform: translateZ(8px);
+}
+
+.banner--layer6 {
+    width: 1200px;
+    transform: translateZ(13px) translateX(88px) translateY(464px);
+    position: absolute;
+    opacity: 0;
+}
+
+.banner--layer7 {
+    width: 1200px;
+    transform: translateZ(1px) translateX(400px) translateY(-136px);
+    position: absolute;
+    opacity: 0;
+    animation-delay: 0.5s!important;
+}
+
+.banner--content-3 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform-style: preserve-3d;
+    transform: translateX(-240px) translateY(24px);
+    font-family: 'Orbit', sans-serif;
+}
+
+@keyframes animationBannerLayer6 {
+    from {
+        opacity: 0;
+        transform: translateZ(13px) translateX(88px) translateY(464px);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(13px) translateX(88px) translateY(0);
+    }
+}
+
+@keyframes animationBannerLayer7 {
+    from {
+        opacity: 0;
+        transform: translateZ(1px) translateX(400px) translateY(-136px);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(8px) translateX(120px) translateY(8px);
+    }
+}
+
+.banner--layer8{
+    width: 1200px;
+    transform: translateZ(26px) translateY(40px) translateX(-600px);
+    position: absolute;
+    opacity: 0;
+}
+
+.banner--layer9 {
+    width: 900px;
+    transform: translateZ(15px) translateY(-300px) translateX(500px);
+    position: absolute;
+    opacity: 0;
+}
+
+@keyframes animationBannerLayer9 {
+    from{
+        opacity: 0;
+        transform: translateZ(1px) translateY(-300px) translateX(500px);
+    }
+    to{
+        opacity: 1;
+        transform: translateZ(15px) translateY(0) translateX(300px);
+    }
+}
+
+@keyframes animationBannerLayer8 {
+    from{
+        opacity: 0;
+        transform: translateZ(26px) translateY(40px) translateX(-600px);
+    }
+    to{
+        opacity: 1;
+        transform: translateZ(26px) translateY(40px) translateX(0);
+    }
+}
