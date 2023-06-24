@@ -81,13 +81,13 @@ function nextBanner() {
         gripPics.appendChild(bannerPics[0])
         if (index === bannerPics.length - 1) {
             let nthDisplay = document.getElementById(`${bannerPic.id}`)
-            bannerPic.children[2].classList.remove('background-banner-pic-from-behind')
+            bannerPic.children[1].classList.remove('background-banner-pic-from-behind')
             nthDisplay.style.animation = "animationRotateNext 1.5s linear forwards"
             nthDisplay.addEventListener('animationend', (evt) => {
                 nthDisplay.style.animation = ""
             })
         } else {
-            bannerPic.children[2].classList.add('background-banner-pic-from-behind')
+            bannerPic.children[1].classList.add('background-banner-pic-from-behind')
         }
     })
 }
@@ -98,13 +98,13 @@ function prevBanner() {
         gripPics.prepend(bannerPics[bannerPics.length - 1])
         if (index === 3) {
             const nthDisplay = document.getElementById(`${bannerPic.id}`)
-            bannerPic.children[2].classList.remove('background-banner-pic-from-behind')
+            bannerPic.children[1].classList.remove('background-banner-pic-from-behind')
             nthDisplay.style.animation = "animationRotatePrev 1.5s linear forwards"
             nthDisplay.addEventListener('animationend', (evt) => {
                 nthDisplay.style.animation = ""
             })
         } else {
-            bannerPic.children[2].classList.add('background-banner-pic-from-behind')
+            bannerPic.children[1].classList.add('background-banner-pic-from-behind')
         }
     })
 }
