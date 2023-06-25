@@ -66,8 +66,8 @@
     width: 100px;
     transform: translateZ(0);
     position: absolute;
-    animation-delay: 0.5s !important;
     opacity: 0;
+    animation-delay: 0.5s !important;
 }
 
 .banner--layer2 {
@@ -168,7 +168,6 @@
     width: 100px;
     transform: translateZ(0) rotateX(1deg) translateX(32vw) translateY(25vh);
     position: absolute;
-    /*opacity: 0;*/
 }
 
 @keyframes animationBannerLayer3 {
@@ -200,7 +199,6 @@
     perspective: 1200px;
     transform: translateY(88px);
     overflow-x: hidden;
-    /*perspective-origin: 50% 50%;*/
 }
 
 .banner--pic {
@@ -219,7 +217,7 @@
     transform-style: preserve-3d;
 }
 
-.link{
+.link {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -236,7 +234,6 @@
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
 }
-
 
 .banner-pic--content {
     width: 100%;
@@ -261,7 +258,6 @@
 .banner--pic:nth-child(5) {
     transform: translateZ(80px) translateX(0) rotateY(0) scale(1.3);
     opacity: 1;
-    /*animation: animationRotate 2s linear forwards;*/
 }
 
 .banner--pic:nth-child(4) {

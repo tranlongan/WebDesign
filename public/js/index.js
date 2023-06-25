@@ -21,12 +21,6 @@ const descriptionBannerContent6 = document.getElementById('banner--content-6__de
 container.addEventListener('scroll', function (evt) {
     banners.forEach((banner, index) => {
         if (banner.getBoundingClientRect().top === 0) {
-            if (banner.id === "banner_2") {
-                titleBannerContent2.classList.add('activeTextBanner2')
-                descriptionBannerContent2.classList.add('activeTextBanner2')
-                bannerLayer1.style.animation = "appendSpider 5s ease-in-out forwards"
-                bannerLayer2.style.animation = "appendBox 5s ease-in-out forwards"
-            }
             if (banner.id === "banner_3") {
                 titleBannerContent3.classList.add('activeTextBanner3')
                 descriptionBannerContent3.classList.add('activeTextBanner3')
@@ -44,7 +38,6 @@ container.addEventListener('scroll', function (evt) {
                     }
                 })
             }
-
             if (banner.id === "banner_4") {
                 titleBannerContent4.classList.add('activeTextBanner3')
                 descriptionBannerContent4.classList.add('activeTextBanner3')
@@ -58,11 +51,16 @@ container.addEventListener('scroll', function (evt) {
                 descriptionBannerContent5.classList.add('activeTextBanner3')
                 bannerLayer6.style.animation = "animationBannerLayer8 3.5s linear forwards"
             }
-
             if (banner.id === "banner_6") {
                 titleBannerContent6.classList.add('activeTextBanner3')
                 descriptionBannerContent6.classList.add('activeTextBanner3')
                 bannerLayer7.style.animation = "animationBannerLayer9 3.5s linear forwards"
+            }
+            if (banner.id === "banner_7") {
+                titleBannerContent2.classList.add('activeTextBanner2')
+                descriptionBannerContent2.classList.add('activeTextBanner2')
+                bannerLayer1.style.animation = "appendSpider 5s ease-in-out forwards"
+                bannerLayer2.style.animation = "appendBox 5s ease-in-out forwards"
             }
         }
     })
@@ -106,14 +104,3 @@ function prevBanner() {
     })
 }
 
-
-// const bannerPics = document.querySelectorAll('.banner--pic')
-// bannerPics.forEach((banner, index) => {
-//     if (index === bannerPics.length - 2) {
-//         Promise.all(
-//             banner.getAnimations({subtree: true}).map((animation) => animation.finished)
-//         ).then(() => {
-//             banner.children[2].classList.remove('background-banner-pic-from-behind')
-//         });
-//     }
-// })
