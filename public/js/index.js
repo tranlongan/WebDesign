@@ -26,9 +26,6 @@ container.addEventListener('scroll', function (evt) {
                 descriptionBannerContent2.classList.add('activeTextBanner2')
                 bannerLayer1.style.animation = "appendSpider 5s ease-in-out forwards"
                 bannerLayer2.style.animation = "appendBox 5s ease-in-out forwards"
-                // bannerLayer1.addEventListener('animationend', function (evt) {
-                //     bannerLayer2.style.animation = `${bannerLayer2.style.animation},box 2s linear infinite alternate`
-                // })
             }
             if (banner.id === "banner_3") {
                 titleBannerContent3.classList.add('activeTextBanner3')

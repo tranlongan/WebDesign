@@ -72,7 +72,7 @@
 
 .banner--layer2 {
     width: 25%;
-    transform: translateZ(0);
+    transform: translateZ(0) translateY(0) translateX(0);
     position: absolute;
     object-fit: cover;
     opacity: 0;
@@ -90,17 +90,6 @@
         transform: translateZ(20px) translateY(-300px) translateX(70px);
     }
 }
-
-/*@keyframes box {*/
-/*    from {*/
-/*        width: 90%;*/
-/*        transform: translateZ(20px) translateX(70px) translateY(-300px);*/
-/*    }*/
-/*    to {*/
-/*        width: 90%;*/
-/*        transform: translateZ(25px) translateX(120px) translateY(-240px);*/
-/*    }*/
-/*}*/
 
 @keyframes appendSpider {
     from {
