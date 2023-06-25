@@ -231,6 +231,7 @@
 }
 
 .link{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -245,7 +246,6 @@
     object-position: 70% 30%;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
-    transform: scale(1.1);
 }
 
 
